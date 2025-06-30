@@ -3,7 +3,7 @@
 ## Installing required packages
 
 ```bash
-sudo apt install light sway swaybg swayidle swayimg swaylock waybar wofi fonts-font-awesome grimshot
+sudo apt install light sway swaybg swayidle swayimg swaylock waybar wofi fonts-font-awesome grimshot pavucontrol
 ```
 
 ## Clone repo
