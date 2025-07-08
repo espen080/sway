@@ -10,9 +10,11 @@ set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulator
 # set $term wezterm
 set $term ghostty
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -22,9 +24,10 @@ include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg ~/.config/sway/ubuntu_bg.png fill
 gaps inner 20
+default_border pixel
+client.focused #6b0a4b #6b0a4b #ffffff #6b0a4b
 # gaps outer 20
 #
 # Example configuration:
@@ -54,8 +57,6 @@ exec_always ~/.config/sway/clamshell.sh
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
-bindsym $mod+Ctrl+Escape exec swaylock
-bindsym $mod+Escape exec wlogout --buttons-per-row=4 -p layer-shell
 
 ### Input configuration
 input * {
@@ -102,6 +103,10 @@ input * {
 
     # Take a screenshot (requires grimshot)
     bindsym Print exec grimshot copy area
+
+    # Locking and power menu
+    bindsym $mod+Ctrl+Escape exec swaylock
+    bindsym $mod+Escape exec wlogout --buttons-per-row=4 -p layer-shell
 #
 # Moving around:
 #
