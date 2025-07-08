@@ -45,17 +45,17 @@ exec_always ~/.config/sway/clamshell.sh
 #
 # Example configuration:
 #
-set $lockcmd 'swaylock -e -F --indicator-idle-visible'
-exec swayidle -w \
-         timeout 300 $lockcmd \
-         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000'
+# exec swayidle -w \
+#          timeout 300 $lockcmd \
+#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
-bindsym $mod+Ctrl+Escape exec $lockcmd
+bindsym $mod+Ctrl+Escape exec swaylock
+bindsym $mod+Escape exec wlogout --buttons-per-row=4 -p layer-shell
 
 ### Input configuration
 input * {
