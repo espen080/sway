@@ -83,10 +83,10 @@ input * {
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+Space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -103,6 +103,9 @@ input * {
 
     # Take a screenshot (requires grimshot)
     bindsym Print exec grimshot copy area
+    
+    # Launch lazydocker
+    bindsym $mod+d exec $term -e $HOME/.local/bin/lazydocker
 
     # Locking and power menu
     bindsym $mod+Ctrl+Escape exec swaylock
@@ -185,7 +188,7 @@ input * {
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+Ctrl+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -252,3 +255,5 @@ exec blueman-applet
 
 include /etc/sway/config.d/*
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+# For authentication prompts
+exec lxpolkit
