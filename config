@@ -106,6 +106,9 @@ input * {
     
     # Launch lazydocker
     bindsym $mod+d exec $term -e $HOME/.local/bin/lazydocker
+    
+    # Launch btop
+    bindsym $mod+t exec $term -e /usr/bin/btop
 
     # Locking and power menu
     bindsym $mod+Ctrl+Escape exec swaylock
