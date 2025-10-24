@@ -11,10 +11,14 @@ set $down j
 set $up k
 set $right l
 
+# Background image
+# set $bg_img 4.jpg
+set $bg_img 1.png
+
 # Your preferred terminal emulator
 # set $term wezterm
-# set $term ghostty
-set $term ~/.local/bin/ghostty-cwd
+set $term ghostty
+# set $term ~/.local/bin/ghostty-cwd
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -25,7 +29,7 @@ include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
-output * bg ~/.config/sway/ubuntu_bg.png fill
+output * bg ~/.config/sway/backgrounds/$bg_img fill
 gaps inner 20
 default_border pixel
 client.focused #6b0a4b #6b0a4b #ffffff #6b0a4b
@@ -81,7 +85,8 @@ input * {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term
+    # bindsym $mod+Return exec $term
+    bindsym $mod+Return exec ~/.local/bin/ghostty-cwd
 
     # Kill focused window
     bindsym $mod+q kill
