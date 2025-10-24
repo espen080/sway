@@ -15,6 +15,9 @@ set $right l
 # set $bg_img 4.jpg
 set $bg_img 1.png
 
+# Colors
+set $frame_color #41979c
+
 # Your preferred terminal emulator
 # set $term wezterm
 set $term ghostty
@@ -32,7 +35,7 @@ include /etc/sway/config-vars.d/*
 output * bg ~/.config/sway/backgrounds/$bg_img fill
 gaps inner 20
 default_border pixel
-client.focused #6b0a4b #6b0a4b #ffffff #6b0a4b
+client.focused $frame_color $frame_color #ffffff $frame_color
 # gaps outer 20
 #
 # Example configuration:
