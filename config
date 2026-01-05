@@ -44,8 +44,8 @@ client.focused $frame_color $frame_color #ffffff $direction_color
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output DP-4 pos 0 0
-output DP-3 pos 2560 0
+# output DP-4 pos 0 0
+# output DP-3 pos 2560 0
 
 ### Turn laptop display off when closed.
 set $laptop eDP-1
