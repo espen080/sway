@@ -15,9 +15,17 @@ set $right l
 # set $bg_img 4.jpg
 set $bg_img 1.png
 
-# Colors
-set $frame_color #41979c
-set $direction_color #ffffff
+# Rose Pine colors
+set $base #191724
+set $surface #1f1d2e
+set $muted #6e6a86
+set $text #e0def4
+set $love #eb6f92
+set $gold #f6c177
+set $rose #ebbcba
+set $pine #31748f
+set $foam #9ccfd8
+set $iris #c4a7e7
 
 # Your preferred terminal emulator
 # set $term wezterm
@@ -36,7 +44,11 @@ include /etc/sway/config-vars.d/*
 output * bg ~/.config/sway/backgrounds/$bg_img fill
 gaps inner 20
 default_border pixel
-client.focused $frame_color $frame_color #ffffff $direction_color
+
+# client.<class> <border> <background> <text> [<indicator> [<child_border>]]
+client.focused $base $pine $text $gold $pine
+client.unfocused $muted $muted $text $gold $iris
+
 # gaps outer 20
 #
 # Example configuration:
