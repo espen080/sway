@@ -48,6 +48,7 @@ default_border pixel
 # client.<class> <border> <background> <text> [<indicator> [<child_border>]]
 client.focused $base $pine $text $gold $pine
 client.unfocused $muted $muted $text $gold $iris
+client.focused_inactive $muted $muted $text $gold $iris
 
 # gaps outer 20
 #
