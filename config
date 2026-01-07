@@ -12,8 +12,8 @@ set $up k
 set $right l
 
 # Background image
-# set $bg_img 4.jpg
-set $bg_img 1.png
+set $bg_img keycap.jpg
+# set $bg_img 1.png
 
 # Rose Pine colors
 set $base #191724
@@ -46,7 +46,7 @@ gaps inner 20
 default_border pixel
 
 # client.<class> <border> <background> <text> [<indicator> [<child_border>]]
-client.focused $base $pine $text $gold $pine
+client.focused $base $pine $text $rose $gold
 client.unfocused $muted $muted $text $gold $iris
 client.focused_inactive $muted $muted $text $gold $iris
 
