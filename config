@@ -285,10 +285,8 @@ bar {
 }
 
 ### Enable network manager in tray
-exec nm-applet --indicator
-exec blueman-applet
+# exec nm-applet --indicator
+# exec blueman-applet
 
 include /etc/sway/config.d/*
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-# Chromium notifications float
-for_window [app_id="chromium-browser" window_type="dialog"] floating enable
