@@ -18,6 +18,7 @@ set $bg_img keycap.jpg
 # Rose Pine colors
 set $base #191724
 set $surface #1f1d2e
+set $overlay #26233a
 set $muted #6e6a86
 set $text #e0def4
 set $love #eb6f92
@@ -46,9 +47,9 @@ gaps inner 20
 default_border pixel
 
 # client.<class> <border> <background> <text> [<indicator> [<child_border>]]
-client.focused $gold $gold $surface $rose $gold
-client.unfocused $gold $muted $text $gold $iris
-client.focused_inactive $gold $muted $text $gold $iris
+client.focused $muted $muted $text $rose $muted
+client.unfocused $overlay $surface $text $overlay $surface
+client.focused_inactive $overlay $surface $text $overlay $surface
 
 # gaps outer 20
 #
